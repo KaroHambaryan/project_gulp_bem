@@ -1,0 +1,57 @@
+@font-face {
+  font-family: OpenSans;
+  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weigth: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-Bold.woff2") format("woff2"), url("../fonts/OpenSans_Condensed-Bold.woff") format("woff");
+  font-weigth: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans_Condensed;
+  font-display: swap;
+  src: url("../fonts/OpenSans_Condensed-Medium.woff2") format("woff2"), url("../fonts/OpenSans_Condensed-Medium.woff") format("woff");
+  font-weigth: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Wider;
+  font-display: swap;
+  src: url("../fonts/Wider.woff2") format("woff2"), url("../fonts/Wider.woff") format("woff");
+  font-weigth: 400;
+  font-style: normal;
+}
+* {
+  font-family: OpenSans;
+}
+
+header {
+  list-style: none;
+  border: 1px solid red;
+}
+header li {
+  margin: 5px;
+}
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  span {
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background-color: yellow;
+  }
+  body span {
+    color: white;
+  }
+}
