@@ -22,6 +22,20 @@
 @font-face {
   font-family: MuseoSansCyrl;
   font-display: swap;
+  src: url("../fonts/MuseoSansCyrl-light-Italic.woff2") format("woff2"), url("../fonts/MuseoSansCyrl-light-Italic.woff") format("woff");
+  font-weigth: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: MuseoSansCyrl;
+  font-display: swap;
+  src: url("../fonts/MuseoSansCyrl-light.woff2") format("woff2"), url("../fonts/MuseoSansCyrl-light.woff") format("woff");
+  font-weigth: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: MuseoSansCyrl;
+  font-display: swap;
   src: url("../fonts/MuseoSansCyrl-bold.woff2") format("woff2"), url("../fonts/MuseoSansCyrl-bold.woff") format("woff");
   font-weigth: 700;
   font-style: normal;
@@ -38,20 +52,6 @@
   font-display: swap;
   src: url("../fonts/MuseoSansCyrl-medium.woff2") format("woff2"), url("../fonts/MuseoSansCyrl-medium.woff") format("woff");
   font-weigth: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: MuseoSansCyrl;
-  font-display: swap;
-  src: url("../fonts/MuseoSansCyrl-light-Italic.woff2") format("woff2"), url("../fonts/MuseoSansCyrl-light-Italic.woff") format("woff");
-  font-weigth: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: MuseoSansCyrl;
-  font-display: swap;
-  src: url("../fonts/MuseoSansCyrl-light.woff2") format("woff2"), url("../fonts/MuseoSansCyrl-light.woff") format("woff");
-  font-weigth: 300;
   font-style: normal;
 }
 @font-face {
@@ -799,4 +799,176 @@
   .catalog-item:nth-child(n) {
     margin: 0 0 20px 0;
   }
+}
+@media only screen and (min-width: 300px) {
+  .reviews {
+    padding: 50px 0 40px 0;
+    min-height: 630px;
+  }
+  .reviews__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .reviews__content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 60px;
+  }
+  .reviews-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 60px 0;
+    box-shadow: 3px 3px 20px #a5a3a3;
+    padding: 15px;
+  }
+  .reviews-item__img {
+    width: 169px;
+    height: 169px;
+    margin: 0 0 60px 0;
+  }
+  .reviews-item__img img {
+    width: 100%;
+  }
+  .reviews-item__comment-wrapper {
+    text-align: center;
+  }
+  .reviews-item__user-name {
+    color: #0D0D0D;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .reviews-item__user-status {
+    color: #646464;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .reviews-item__user-review {
+    max-width: 680px;
+    margin-top: 15px;
+    text-align: left;
+    max-width: 680px;
+    color: #0D0D0D;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .reviews-item {
+    flex-wrap: nowrap;
+  }
+  .reviews-item__img {
+    margin: 0 30px 0 0;
+  }
+  .reviews-item__comment-wrapper {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 300px) {
+  .footer {
+    min-height: 630px;
+    position: static;
+  }
+  .footer__info {
+    width: 100%;
+    height: 270px;
+    position: static;
+    left: 0;
+    top: 0;
+    transform: translateX(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #C70101;
+  }
+  .footer__addr {
+    color: #FFFFFF;
+    margin: 51px 0 0 0;
+  }
+  .footer__phone {
+    margin: 38px 0 0 0;
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  .footer__social {
+    margin: 36px 0 0 0;
+  }
+}
+@media only screen and (min-width: 479px) {
+  .footer {
+    position: relative;
+  }
+  .footer__info {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 460px;
+  }
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.56);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  min-height: 400px;
+  background-color: #f2f2f2;
+  padding: 38px 40px 40px 40px;
+}
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: -40px;
+  font-size: 41px;
+  font-weight: 900;
+  line-height: 21px;
+  color: #C70101;
+  cursor: pointer;
+}
+.modal__subtitle {
+  color: #0D0D0D;
+  text-align: center;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 19px;
+}
+.modal__descr {
+  margin-top: 10px;
+  color: #0D0D0D;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+}
+.modal__form input:first-child {
+  margin-top: 25px;
+}
+.modal__button {
+  margin-top: 20px;
+  width: 100%;
+  height: 55px;
+}
+.modal_mini {
+  min-height: 140px;
+}
+
+#consultations, #ordeer, #thanks {
+  display: none;
 }
